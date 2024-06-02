@@ -9,7 +9,8 @@ module.exports = {
 			watch: false,
 			max_memory_restart: '1G',
 			env: {
-				port: 8006,
+				PORT: 8006,
+				HOST: '0.0.0.0',
 			},
 		},
 	],
