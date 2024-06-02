@@ -8,6 +8,9 @@ module.exports = {
 			autorestart: true,
 			watch: false,
 			max_memory_restart: '1G',
+			env: {
+				port: 8006,
+			},
 		},
 	],
 };
