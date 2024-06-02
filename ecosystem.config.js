@@ -2,12 +2,11 @@ module.exports = {
 	apps: [
 		{
 			name: 'config-management',
-			script: './start.sh',
+			name: 'rails-app',
+			script: 'bundle',
+			args: 'exec puma -C config/puma.rb',
 			interpreter: 'bash',
-			instances: 1,
-			autorestart: true,
-			watch: false,
-			max_memory_restart: '1G',
+			cwd: '/home/viapulsa/certbot/simpul-chat-server',
 			env: {
 				PORT: 8006,
 				HOST: '0.0.0.0',
