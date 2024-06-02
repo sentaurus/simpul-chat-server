@@ -8,7 +8,7 @@ module.exports = {
 			cwd: '/home/viapulsa/certbot/simpul-chat-server',
 			env: {
 				RAILS_ENV: 'production',
-				PORT: 3000,
+				PORT: 8006,
 			},
 		},
 	],
