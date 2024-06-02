@@ -6,10 +6,6 @@ module.exports = {
 			args: 'exec puma -C config/puma.rb',
 			interpreter: 'bash',
 			cwd: '/home/viapulsa/certbot/simpul-chat-server',
-			env: {
-				RAILS_ENV: 'production',
-				PORT: 8006,
-			},
 		},
 	],
 };
