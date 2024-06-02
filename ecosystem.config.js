@@ -1,7 +1,7 @@
 module.exports = {
 	apps: [
 		{
-			name: 'rails-app',
+			name: 'config-management',
 			script: 'bundle',
 			args: 'exec puma -C config/puma.rb',
 			interpreter: '/bin/bash',
