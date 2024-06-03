@@ -40,5 +40,8 @@ module SimpulChatServer
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.hosts << "0b31-180-248-30-101.ngrok-free.app"
+    config.hosts << "145d-180-248-30-101.ngrok-free.app"
+
   end
 end
