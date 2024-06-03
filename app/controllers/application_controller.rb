@@ -36,7 +36,7 @@ class ApplicationController < ActionController::API
     # Define conditions under which authorization should be excluded
     # For example, exclude authorization for certain controllers or actions
     # Example:
-    controller_name == 'authentication' &&  (action_name == 'login' || action_name == 'register' || action_name == 'chat_messages')
+    controller_name == 'authentication' &&  (action_name == 'login' || action_name == 'register')
 
   end
 end
