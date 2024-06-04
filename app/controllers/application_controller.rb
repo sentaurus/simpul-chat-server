@@ -1,7 +1,7 @@
 # app/controllers/application_controller.rb
 
 class ApplicationController < ActionController::API
-  # before_action :authorize_request, unless: -> { exclude_authorization? }
+  before_action :authorize_request, unless: -> { exclude_authorization? }
 
   private
 
