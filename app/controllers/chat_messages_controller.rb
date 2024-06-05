@@ -3,7 +3,7 @@ class ChatMessagesController < ApplicationController
 
   def index
     @messages = ChatMessage.includes(:user).order(created_at: :asc)
-    render json: @messages, include: :user
+    render json: { messages: @messages }, include: :user
   end
 
   def create

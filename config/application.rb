@@ -41,7 +41,6 @@ module SimpulChatServer
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     config.hosts << "largely-flexible-bass.ngrok-free.app"
-    config.hosts << "largely-flexible-bass.ngrok-free.app"
 
   end
 end

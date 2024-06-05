@@ -48,4 +48,4 @@ end
 gem 'bcrypt'
 gem 'jwt'
 gem 'pusher'
-gem 'rack-cors'
+gem 'rack-cors', require: 'rack/cors'

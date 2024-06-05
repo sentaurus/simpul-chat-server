@@ -17,15 +17,14 @@ class ApplicationController < ActionController::API
 
   def decoded_token
     return nil unless token_present?
-
-    token = request.headers['Authorization']&.split(' ')&.last
+    token = request.headers['token']
     JWT.decode(token, Rails.application.credentials.jwt_secret)[0] if token
   rescue JWT::DecodeError
     nil
   end
 
   def token_present?
-    request.headers['Authorization'].present? && request.headers['Authorization'].split(' ').length == 2
+    request.headers['token'].present? 
   end
 
   def render_unauthorized
