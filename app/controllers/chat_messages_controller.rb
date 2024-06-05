@@ -21,4 +21,30 @@ class ChatMessagesController < ApplicationController
   def message_params
     params.require(:chat_message).permit(:content)
   end
+
+  def authorize_request
+    @current_user = find_current_user
+    render_unauthorized unless @current_user
+  end
+
+  def find_current_user
+    return nil unless decoded_token
+    User.find_by(id: decoded_token['user_id'])
+  end
+
+  def decoded_token
+    return nil unless token_present?
+    token = request.headers['token']
+    JWT.decode(token, Rails.application.credentials.jwt_secret)[0] if token
+  rescue JWT::DecodeError
+    nil
+  end
+
+  def token_present?
+    request.headers['token'].present? 
+  end
+
+  def render_unauthorized
+    render json: { error: 'Unauthorized' }, status: :unauthorized
+  end
 end
