@@ -1,7 +1,7 @@
 class ChatMessagesController < ApplicationController
   before_action :authorize_request
 
-  def index
+  def show
     @messages = ChatMessage.includes(:user).order(created_at: :asc)
     render json: { messages: @messages }, include: :user
   end

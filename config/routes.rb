@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
   post 'register', to: 'authentication#register'
   post 'login', to: 'authentication#login'
-  resources :chat_messages, only: [:index, :create]
+  get  'chat', to: 'chat#show'
+  post 'chat', to: 'chat#create'
+  # resources :chat_messages, only: [:index, :create]
 end
