@@ -1,3 +1,3 @@
 #!/usr/bin/expect -f
 
-ngrok http --host-header="0.0.0.0:8000" --domain=largely-flexible-bass.ngrok-free.app 8000
+rails s -b=0.0.0.0 -p=8003
